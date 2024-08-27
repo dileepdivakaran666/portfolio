@@ -1,0 +1,62 @@
+.about-header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-left: 1rem;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-header h1{
+    font-family: Train One ;
+    position: relative;
+    font-size: 350%;
+    z-index: 2;
+    color: var(--first-color);
+}
+#abt-h1{
+    position: absolute;
+    font-size: 450%;
+    color: var(--high-light-color);
+    z-index: 1;
+    opacity: 0.3
+}
+
+.ab-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ab-con-left{
+    width: 40%;
+}
+.ab-model{
+    width: 60%;
+    height: 60%;
+}
+.ab-con-right{
+    width: 50%;
+}
+.about-header span{
+    color: var(--high-light-color);
+}
+.ab-con-right strong{
+    color: var(--high-light-color);
+}
+
+.contact-container{
+    margin-top: 2rem;
+}
+.contact-details{
+    margin-top: 1rem;
+}
+
+@media  screen and (max-width: 750px) {
+    .ab-container{
+        flex-direction: column;
+    }
+    
+}

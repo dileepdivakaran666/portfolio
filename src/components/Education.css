@@ -1,0 +1,97 @@
+.edu-header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-left: 1rem;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edu-header h1{
+    font-family: Train One ;
+    position: relative;
+    font-size: 350%;
+    z-index: 2;
+    color: var(--first-color);
+}
+#edu-h1{
+    position: absolute;
+    font-size: 450%;
+    color: var(--high-light-color);
+    z-index: 1;
+    opacity: 0.3
+}
+
+.edu-list{
+    margin-top: 2rem;
+    margin-left: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.edu-li-item{
+    margin-left: 5rem;
+    padding: 2rem 2rem;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.edu-item{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+.c-img{
+    width: 40%;
+    height: 280px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-img-item{
+    width: 336px;
+    height: 224px;
+    border: 2px solid var(--first-color);
+    padding: 5px;
+    border-radius: 30px;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+.c-img-item:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 15px var(--shadow-color), 0 0 15px var(--shadow-color);
+    transform: scale(1.2);
+}
+.course{
+    color: var(--hover-color);
+}
+.course-date{
+    color: var(--hover-color);
+}
+.edu-list h2{
+    color: var(--title-color);
+}
+.edu-item h4{
+    color: var(--high-light-color);
+}
+
+@media screen and (max-width: 750px){
+    .edu-li-item{
+        margin: 0.5rem;
+    }
+    .edu-item{
+        width: 100%;
+    }
+    .edu-li-item .c-img{
+        display: none;
+    }
+}

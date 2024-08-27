@@ -1,0 +1,191 @@
+.skill-header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-left: 1rem;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-header h1{
+    position: relative;
+    font-family: Train One ;
+    position: relative;
+    font-size: 350%;
+    z-index: 2;
+    color: var(--first-color);
+}
+
+#skill-h1{
+    position: absolute;
+    font-size: 450%;
+    color: var(--high-light-color);
+    z-index: 1;
+    opacity: 0.3
+}
+
+.skill-container{
+    width: 100%;
+    height:100%;
+    padding: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+.skill-list{ 
+    width: 33%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0.8rem;
+    background-color: var(--shadow-color);
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.skill-list h4{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--hover-color);
+}
+
+.row{
+    margin: 0.8rem;
+}
+.row-item{
+    padding: 0.5rem;
+}
+.item-text{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 1.4rem;
+    position: relative;
+}
+.item-text span:last-child{
+    position: absolute;
+}
+
+.item-text .w-90{
+    margin-left: 90%;
+}
+.item-text .w-70{
+    margin-left: 70%;
+}
+.item-text .w-85{
+    margin-left: 85%;
+}.item-text .w-75{
+    margin-left: 75%;
+}
+.item-text .w-80{
+    margin-left: 80%;
+}
+.item-text .w-50{
+    margin-left: 50%;
+}
+
+.progress{
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(35, 93, 132);
+    border-radius: 10px;
+}
+.progress-bar{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--high-light-color);
+}
+.progress .w-85{
+    width: 85%;
+    animation: w-85 3s;
+}
+.progress .w-75{
+    width: 75%;
+    animation: w-75 3s;
+}
+.progress .w-90{
+    width: 90%;
+    animation: w-90 3s;
+}
+.progress .w-80{
+    width: 80%;
+    animation: w-80 3s;
+}
+.progress .w-50{
+    width: 50%;
+    animation: w-50 3s;
+}
+.progress .w-70{
+    width: 70%;
+    animation: w-70 3s;
+}
+
+@keyframes w-85{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes w-70{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes w-90{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes w-75{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes w-80{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes w-50{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .skill-container{
+        flex-direction: column;
+    }
+    .skill-list{
+        width: 100%;
+    }
+    .item-text span:last-child{
+        margin-left: 95%;
+    }
+}

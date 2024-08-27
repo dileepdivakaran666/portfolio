@@ -1,0 +1,49 @@
+.experience-header{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-left: 1rem;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.experience-header h1{
+    font-family: Train One ;
+    position: relative;
+    font-size: 350%;
+    z-index: 2;
+    color: var(--first-color);
+}
+#exp-h1{
+    position: absolute;
+    font-size: 450%;
+    color: var(--high-light-color);
+    z-index: 1;
+    opacity: 0.3
+}
+
+
+
+.exp-container{
+    margin-left: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: start;
+}
+
+.exp-container h2,h4,h5{
+    color: var(--high-light-color);
+}
+.exp-container span{
+    color: var(--first-color);
+}
+
+.exp-container .exp-list{
+    margin: 1rem 2rem;
+    list-style-type:none;
+}
+.exp-list li{
+    padding-top: 1rem;
+}

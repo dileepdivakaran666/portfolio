@@ -1,0 +1,23 @@
+.back-to-top{
+    display: none; /* Initially hidden */
+    position:fixed; /* Sticks to a specific spot on the screen */
+    width: 35px;
+    height:35px;
+    bottom: 50px; /* Distance from the bottom of the screen */
+    right: 35px; /* Distance from the right side of the screen */
+    z-index: 1000; /* Ensures the button is on top of other content */
+    
+    background-color:transparent;
+    color: var(--high-light-color);
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.back-to-top.visible {
+    display: block; /* Show the button when visible */
+}
+
+.back-to-top:hover {
+    background-color: transparent; /* Change color on hover */
+    color: var(--first-color);
+}

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&family=Train+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --header-height: 3.5rem;
+  --first-color: hsl(0, 0%, 100%);
+  --high-light-color: hsl(180, 100%, 50%);
+  --hover-color: hsl(60, 98%, 50%);
+  --title-color: hsl(180, 100%, 87%);
+  --text-color: hsl(0, 0%, 75%);
+  --body-color: hsl(228, 46%, 12%);
+  --second-body-col: hsl(228, 44%, 20%);
+  --shadow-color: hsl(203, 58%, 21%);
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Dancing Script", cursive;
+  --z-tooltip: 10;
+  --z-fixed: 1000;
+}   
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+ul {
+  list-style: none;
+ }
+ 
+ a {
+  text-decoration: none;
+ }

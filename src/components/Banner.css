@@ -1,0 +1,90 @@
+.banner{
+    margin-top: 3.5rem;
+    height: 500px;
+}
+.ban-left{
+    padding-left: 4rem;
+    padding-right: 3rem;
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:end;
+    align-items:end;
+}
+.ban-left-content{
+    margin-bottom: 10%;
+}
+.social-media{
+    margin-top: 1.5rem;
+    display:flex;
+    flex-direction: row;
+    gap:1.5rem
+}
+.icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--high-light-color);
+    border-radius: 50%;
+}
+.s-icon{
+    color: var(--high-light-color);
+    border-radius: 50%;
+}
+.ban-right{
+    width: 50%;
+}
+.ban-left p{
+    font-size:small;
+    font-family: Arial, Helvetica, sans-serif;
+    font-display:inherit;
+}
+.full-stack{
+    color: var(--high-light-color);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Train One", system-ui;
+    border-right: 0.15em solid var(--high-light-color);
+    animation: typing 5s steps(12, end) infinite alternate, blink-caret 1s step-end infinite;
+    animation-timing-function: linear;
+}
+.discription{
+    margin-top: 1.5rem;
+}
+
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: var(--typing-width);
+    }
+}
+@keyframes blink-caret {
+    from {
+        border-color: transparent;
+    }
+    100%{
+        border-color: var(--high-light-color);
+
+    }
+}
+.ban-left span{
+    color: var(--hover-color);
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+@media screen and (max-width: 1150px) {
+    .ban-left{
+        width: 100%;
+    }
+    
+}
+@media screen and (min-width: 1150px) {
+    .full-stack{
+        max-width: 40%;
+    }
+    
+}
