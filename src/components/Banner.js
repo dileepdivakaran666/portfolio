@@ -8,10 +8,20 @@ function Banner() {
   const [textWidth, setTextWidth] = useState('auto');
 
   useEffect(() => {
-    if (textRef.current) {
-      setTextWidth(textRef.current.scrollWidth + 7);
-    }
-  }, []);
+    const updateTextWidth = () => {
+      if (textRef.current) {
+        setTextWidth(textRef.current.scrollWidth + 7);
+      }
+    };
+
+    updateTextWidth();
+
+    // Optionally add a resize listener for responsiveness
+    window.addEventListener('resize', updateTextWidth);
+    return () => {
+      window.removeEventListener('resize', updateTextWidth);
+    };
+  }, [textRef,textWidth]);
   return (
     <div className='banner'>
         <div className='ban-left'>
