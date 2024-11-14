@@ -13,9 +13,9 @@
   --hover-color: hsl(60, 98%, 50%);
   --title-color: hsl(180, 100%, 87%);
   --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(228, 46%, 12%);
+  --body-color: #172035;
   --second-body-col: hsl(228, 44%, 20%);
-  --shadow-color: hsl(203, 58%, 21%);
+  --shadow-color: hsl(200, 2%, 31%);
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --z-tooltip: 10;
@@ -23,7 +23,7 @@
 }   
 body {
   background-color: var(--body-color);
-  color: var(--text-color);
+  color: var(--first-color);
   font-family: var(--body-font);
 }
 ul {

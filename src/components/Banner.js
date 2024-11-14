@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
-import { FaFacebook, FaInstagramSquare,FaLinkedin,FaTwitterSquare } from "react-icons/fa";
+import img_dilee from '../assets/dilee.jpg'
+import { FaFacebook, FaInstagramSquare,FaLinkedin,FaTwitterSquare, FaGithub } from "react-icons/fa";
 import './Banner.css'
 
 function Banner() {
@@ -8,10 +9,22 @@ function Banner() {
   const [textWidth, setTextWidth] = useState('auto');
 
   useEffect(() => {
-    if (textRef.current) {
-      setTextWidth(textRef.current.scrollWidth + 7);
-    }
-  }, []);
+    const updateTextWidth = () => {
+      if (textRef.current) {
+        setTextWidth(textRef.current.scrollWidth + 7);
+      }
+    };
+
+    updateTextWidth();
+
+    // Optionally add a resize listener for responsiveness
+    window.addEventListener('resize', updateTextWidth);
+    return () => {
+      window.removeEventListener('resize', updateTextWidth);
+    };
+  }, [textRef,textWidth]);
+
+
   return (
     <div className='banner'>
         <div className='ban-left'>
@@ -27,30 +40,41 @@ function Banner() {
                 
                   <div className='social-media'>
                     <motion.div whileHover={{ scale: 1.8 }}>
-                    <a href="https://www.linkedin.com/in/dileep-divakaran-4a2104248/" target="_blank" rel="noopener noreferrer" >
-                      <div className='icon-container'>
-                        <FaLinkedin className='s-icon'/>
-                      </div>
-                    </a>
+                      <a href="https://www.linkedin.com/in/dileep-divakaran-4a2104248/" target="_blank" rel="noopener noreferrer" >
+                        <div className='icon-container'>
+                          <FaLinkedin className='s-icon'/>
+                        </div>
+                      </a>
+                    </motion.div>
+
+                    <motion.div whileHover={{ scale: 1.8 }}>
+                      <a href="https://github.com/dileepdivakaran666" target="_blank" rel="noopener noreferrer" >
+                        <div className='icon-container'>
+                          <FaGithub className='s-icon'/>
+                        </div>
+                      </a>
+                    </motion.div>
+
+                    <motion.div whileHover={{ scale: 1.8 }}>
+                      <a href='https://www.instagram.com/dra_con_ian/' target="_blank" rel="noopener noreferrer"> 
+                        <div className='icon-container'>
+                          <FaInstagramSquare className='s-icon'/> 
+                        </div>
+                      </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.8 }}>
-                    <a href='https://www.instagram.com/dra_con_ian/' target="_blank" rel="noopener noreferrer"> 
-                      <div className='icon-container'>
-                        <FaInstagramSquare className='s-icon'/> 
-                      </div>
-                    </a>
+                      <a href="https://www.facebook.com/dileep.divakaran.666" target='_blank' rel="noopener noreferrer">
+                        <div className='icon-container'>
+                          <FaFacebook className='s-icon'/>
+                        </div>
+                      </a>
                     </motion.div>
                     <motion.div whileHover={{ scale: 1.8 }}>
-                    <div className='icon-container'>
-                      <FaFacebook className='s-icon'/>
-                    </div>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.8 }}>
-                    <a href='https://x.com/dileeDiva' target="_blank" rel="noopener noreferrer">
-                      <div className='icon-container'>
-                        <FaTwitterSquare className='s-icon'/>
-                      </div>
-                    </a>
+                      <a href='https://x.com/dileeDiva' target="_blank" rel="noopener noreferrer">
+                        <div className='icon-container'>
+                          <FaTwitterSquare className='s-icon'/>
+                        </div>
+                      </a>
                     </motion.div>
                   </div>
 
@@ -58,7 +82,9 @@ function Banner() {
             </div>
         </div>
         <div className='ban-right'>
-
+          <div className='ban-right-content'>
+            <img className='ban-right-model' src={img_dilee} alt="dilee.jpg"/>
+          </div>
         </div>
     </div>
   )

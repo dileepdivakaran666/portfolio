@@ -1,7 +1,6 @@
 import React from 'react'
-import model from '../assets/model.jpg'
-import { FaPhoneSquare } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
+import model from '../assets/dilee.jpg'
+import { NavLink } from 'react-router-dom'
 import './About.css'
 
 function About() {
@@ -21,15 +20,11 @@ function About() {
         <p>Currently, I am expanding my skill set by diving into MongoDB and Express.js, which will enable me to develop more flexible and scalable applications using the MERN stack.</p>
         <p>Looking ahead, my ambition is to become an <strong>AI Specialist</strong> who collaborates closely with web technologies. I am fascinated by the potential of AI to transform the digital landscape, and I aspire to integrate AI-driven solutions into web applications to create smarter, more intuitive user experiences.</p>
         <section className='contact-container'>
-        <h3><strong>Contact</strong> me</h3>
-        <div className='contact-details'>
-          <p>Email : 
-            <a href='mailto:dileepdivakaran666@gmail.com' target="_blank" rel="noopener noreferrer">
-            <IoMail/>dileepdivakaran666@gmail.com
-            </a>
-          </p>
-          <p>Phone no : <a href="tel:+918113938201" target="_blank" rel="noopener noreferrer"> <FaPhoneSquare/>+918113938201</a></p>
-        </div>
+        
+        <NavLink to="/contactme">
+  <button className='contact-btn'>Contact Me</button>
+</NavLink>
+
         </section>
       </div>
     </div>

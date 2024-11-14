@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react'
 import { FaArrowAltCircleUp } from "react-icons/fa";
+import ParticleBackground from './ParticleBackground';
 import './HomePage.css'
 
 
@@ -8,7 +9,6 @@ import About from '../components/About'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
-import Footer from '../components/Footer'
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,24 +34,20 @@ function HomePage() {
       window.removeEventListener('scroll', toggleVisibility)
     }
   },[])
-  
 
   return (
-    <main>
-        
+        <main>
+          <ParticleBackground/>
         <FaArrowAltCircleUp
           className={`back-to-top ${isVisible ? 'visible' : '' }`} 
           onClick={toTop}
         />
-        
         <Banner/>
-        
-        <About/>
+        <Experience/>
         <Education/>
         <Skills/>
-        <Experience/>
-        <Footer/>
-    </main>
+        <About/>
+        </main>
   )
 }
 

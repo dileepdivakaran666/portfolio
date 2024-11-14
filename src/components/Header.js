@@ -45,7 +45,7 @@ function Header() {
                     <NavLink to="/" className={"nav__link"} onClick={closeMenuOnMobile}>Project</NavLink>
                 </li> */}
                 <li>
-                    <NavLink to="/" className={"nav__link"} onClick={closeMenuOnMobile}>Contact Us</NavLink>
+                    <NavLink to="/contactme" className={"nav__link"} onClick={closeMenuOnMobile}>Contact Me</NavLink>
                 </li>
                 <div className="nav__close" id="nav-close" onClick={toggleMenu}>
                 <IoClose/>

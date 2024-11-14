@@ -1,11 +1,14 @@
 import './App.css';
-import {BrowserRouter as Router, Routes,Route} from 'react-router-dom' 
+import {HashRouter as Router, Routes,Route} from 'react-router-dom' 
 import HomePage from './pages/HomePage';
 import About from './components/About';
 import Header from './components/Header';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
+
 
 function App() {
   return (
@@ -17,7 +20,9 @@ function App() {
         <Route path='/education' element={<Education/>}/>
         <Route path='/skills' element={<Skills/>}/>
         <Route path='/experience' element={<Experience/>}/>
+        <Route path='/contactme' element={<Contact/>}/>
       </Routes>
+      <Footer/>
     </Router>      
   );
 }

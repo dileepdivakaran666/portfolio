@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: 150px;
-    margin-left: 1rem;
+    padding-left: 1rem;
     margin-top: 150px;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
 
 
 .exp-container{
-    margin-left: 4rem;
+    padding-left: 4rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -41,9 +41,65 @@
 }
 
 .exp-container .exp-list{
-    margin: 1rem 2rem;
-    list-style-type:none;
+    padding: 1rem 2rem;
 }
-.exp-list li{
-    padding-top: 1rem;
+.exp-list1 li{
+    display: flex;
+    align-items: center;
+}
+.exp-list1 li span{
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--high-light-color);
+}
+
+.exp-list2 li{
+    list-style-type: circle;
+}
+
+.telecom-works{
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.exp-container th{
+    text-align: left;
+    font-size: x-large;
+    color: var(--high-light-color);
+}
+.exp-container td:nth-child(odd){
+    text-align: left;
+}
+.exp-container td:nth-child(even){
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+    .experience-header h1{
+        font-size: 300%;
+    }
+    #exp-h1{
+        font-size: 380%;
+    }
+    .exp-container{
+        width: 100%;
+    }
+
+    .telecom-works{
+        width: 100%;
+    }
+    .exp-list1 li{
+        display: inline-block;
+    }
+    .exp-list1 li span{
+        padding: 0;
+    }
+}
+@media screen and (min-width: 751px){
+    .exp-list1 li span{
+        padding: 0;
+    }
+    .exp-list1 li{
+        display: inline-block;
+    }
 }
