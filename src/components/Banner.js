@@ -23,8 +23,6 @@ function Banner() {
       window.removeEventListener('resize', updateTextWidth);
     };
   }, [textRef,textWidth]);
-
-
   return (
     <div className='banner'>
         <div className='ban-left'>
