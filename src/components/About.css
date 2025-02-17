@@ -46,20 +46,26 @@
     animation: borderAnimation 4s linear infinite alternate;
 }
 .contact-btn{
-    width: 50%;
+    width: 20%;
     padding: 10px 20px;
     font-size: 16px;
     background-color: var(--high-light-color);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: bold;
     color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 .contact-btn:hover{
     background: linear-gradient(to right, var(--high-light-color), var(--shadow-color));
     border: 2px solid var(--first-color);
 }
+
 
 @keyframes borderAnimation {
     0% {
@@ -99,6 +105,22 @@
 .ab-con-right strong{
     color: var(--high-light-color);
 }
+#more{
+    display: none;
+}
+#readMoreBtn{
+    border: none;
+    background: none;
+    white-space: nowrap;
+    color: var(--high-light-color);
+    font-family: "Rubik Mono One", monospace;
+    font-size: large;
+    font-weight: bold;
+}
+#readMoreBtn:hover{
+   font-size: 26px;
+}
+
 
 .contact-container{
     margin-top: 2rem;

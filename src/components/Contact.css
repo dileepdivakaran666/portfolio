@@ -79,15 +79,47 @@ form {
   .cont-personal{
     margin: 3rem 0 0 3rem;
     width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .cont-personal>h1{
-    font-size:larger;
-  }
-  
-  @media (max-width: 600px) {
+  .cont-personal .cont-h1{
+    height: 40%;
+    text-align: center;
+    font-size: 50px;
+     font-family: "Rubik Mono One", monospace;
     
+  }
+  .contact-details{
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    position: relative;
+  }
+  .contact-details table{
+    position: absolute;
+    bottom: 3rem;
+    padding-top: 70%;
+  }
+  .contact-details table td{
+    text-align: left;
+    white-space: nowrap;
+  }
+
   
+  @media (max-width: 750px) {
     #sub-button {
       font-size: 14px;
+    }
+    .contact-page{
+      padding: 0;
+      padding-left: 2rem;
+      flex-direction: column;
+    }
+    .cont-container {
+      width: 90%;
     }
   }

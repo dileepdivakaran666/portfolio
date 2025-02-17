@@ -32,33 +32,29 @@ function Contact() {
 
   return (
     <div className='contact-page'>
-   
-    <div className='cont-personal'>
+      <div className='cont-personal'>
 
-      <h1>Let's Chat.<br/>Tell me about your project</h1>
-      <div className='contact-details'>
-          <table>
-            <tr>
-              <th>Personal Contact</th>
-            </tr>
-            <tr>
-              <td>Email :</td>
-              <td><a href='mailto:dileepdivakaran666@gmail.com' target="_blank" rel="noopener noreferrer">
-                  <IoMail/>dileepdivakaran666@gmail.com
-                  </a>
-              </td>
-            </tr>
-            <tr>
-              <td>Phone no :</td>
-              <td><a href="tel:+918113938201" target="_blank" rel="noopener noreferrer"> <FaPhoneSquare/>+918113938201</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-    </div>
+        <h1 className='cont-h1'>Let's Chat.<br/>Tell me about your project</h1>
+        <div className='contact-details'>
+            <table>
+              <tr>
+                <td>Email :</td>
+                <td><a href='mailto:dileepdivakaran666@gmail.com' target="_blank" rel="noopener noreferrer">
+                    <IoMail/>dileepdivakaran666@gmail.com
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td>Phone no :</td>
+                <td><a href="tel:+918113938201" target="_blank" rel="noopener noreferrer"> <FaPhoneSquare/>+918113938201</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+      </div>
     <div className='cont-container'>
       <h2>Send me a Message</h2>
-    <form onSubmit={handleSubmit} className='con-form'>
+      <form onSubmit={handleSubmit} className='con-form'>
         <div className='con-items'>
             <label htmlFor='name'>Name:</label>
             <input
@@ -94,7 +90,7 @@ function Contact() {
             />
         </div>
         <button type="submit" id="sub-button">Submit</button>
-    </form>
+      </form>
     </div>
     </div>
   )

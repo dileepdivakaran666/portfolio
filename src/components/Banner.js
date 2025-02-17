@@ -40,7 +40,7 @@ function Banner() {
                 
                   <div className='social-media'>
                     <motion.div whileHover={{ scale: 1.8 }}>
-                      <a href="https://www.linkedin.com/in/dileep-divakaran-4a2104248/" target="_blank" rel="noopener noreferrer" >
+                      <a href="https://www.linkedin.com/in/dileep-divakaran-b30b06326/" target="_blank" rel="noopener noreferrer" >
                         <div className='icon-container'>
                           <FaLinkedin className='s-icon'/>
                         </div>

@@ -64,8 +64,11 @@
   
   @media screen and (max-width: 750px){
     .footer-container{
-      margin-left: 2rem;
+      width: 100%;
+      padding-left: 2rem;
       flex-direction: column;
-      justify-content:center;
+      justify-content:start;
+      align-items: start;
+      gap: 2rem
     }
   }
