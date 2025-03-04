@@ -33,7 +33,7 @@ nav{
 
 .nav__link {
     color: var(--high-light-color);
-    font-weight: var(--font-semi-bold);
+    font-weight: bold;
     transition: color 0.4s;
 }
    

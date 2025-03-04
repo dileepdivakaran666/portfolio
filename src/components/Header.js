@@ -30,17 +30,22 @@ function Header() {
                     <NavLink to="/" className={"nav__link"} onClick={closeMenuOnMobile}>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" className={"nav__link"} onClick={closeMenuOnMobile}>About me</NavLink>
+                    <NavLink to="/experience" className={"nav__link"} onClick={closeMenuOnMobile}>Experience</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/experience" className={"nav__link"} onClick={closeMenuOnMobile}>Experience</NavLink>
+                    <NavLink to="/projects" className={"nav__link"} onClick={closeMenuOnMobile}>Projects</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/skills" className={"nav__link"} onClick={closeMenuOnMobile}>Skills</NavLink>
                 </li>
                 <li>
                     <NavLink to="/education" className={"nav__link"} onClick={closeMenuOnMobile}>Education</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/skills" className={"nav__link"} onClick={closeMenuOnMobile}>Skills</NavLink>
+                    <NavLink to="/about" className={"nav__link"} onClick={closeMenuOnMobile}>About me</NavLink>
                 </li>
+                
+                
                 {/* <li>
                     <NavLink to="/" className={"nav__link"} onClick={closeMenuOnMobile}>Project</NavLink>
                 </li> */}

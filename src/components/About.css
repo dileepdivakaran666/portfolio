@@ -40,10 +40,10 @@
     border-radius: 50%;
     width: 50%;
     height: 50%;
-    border: 7px dashed transparent;
-    outline: 10px double var(--high-light-color);
+    border: 7px transparent var(--first-color);
+    /* outline: 10px double var(--high-light-color); */
     outline-offset: 0.5rem;
-    animation: borderAnimation 4s linear infinite alternate;
+    animation: borderAnimation 4s linear infinite;
 }
 .contact-btn{
     width: 20%;
@@ -69,30 +69,30 @@
 
 @keyframes borderAnimation {
     0% {
-        border-color:var(--high-light-color) var(--shadow-color) var(--shadow-color) var(--shadow-color);
-        border-style: dashed;
-        outline: 10px dashed var(--shadow-color);
+        /* border-color:var(--high-light-color) transparent transparent var(--first-color);
+        border-style:inset; */
+        /* outline: 10px dashed var(--shadow-color); */
+        box-shadow: 0 0 0 var(--high-light-color);
     }
     25% {
-        border-color: var(--shadow-color) var(--high-light-color) var(--shadow-color) var(--shadow-color);
-        border-style: dashed;
-        outline: 10px dashed var(--high-light-color);
+        /* border-color: var(--first-color) var(--high-light-color) transparent transparent;
+        border-style: inset; */
+        box-shadow:   0 0 10px 5px var(--high-light-color);
+        border-color: transparent
     }
-    50% {
-      border-color:  var(--shadow-color) var(--shadow-color) var(--high-light-color) var(--shadow-color);
-      border-style: dashed;
-      outline: transparent;
+   /* 50% {
+      border-color:  transparent transparent var(--high-light-color) transparent;
+      border-style: groove;
     }
-    75%{
-        border-color: var(--shadow-color) var(--shadow-color) var(--shadow-color) var(--high-light-color);
-        border-style: dashed;
-        outline: 10px dotted var(--shadow-color);
-    }
-    100%{
-        border-color: var(--high-light-color) var(--shadow-color) var(--shadow-color) var(--shadow-color);
-        border-style: dashed;
-        outline: 10px dotted var(--high-light-color);
-    }
+     75%{
+        border-color: transparent transparent transparent var(--high-light-color);
+        border-style: groove;
+    } */
+    /* 100%{
+        border-color:  transparent transparent transparent var(--high-light-color);
+        border-style: groove;
+        outline: 10px dotted var(--high-light-color); 
+     */
 }
 
 

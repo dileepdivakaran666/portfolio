@@ -1,105 +1,59 @@
-.experience-header{
-    position: relative;
-    width: 100%;
-    height: 150px;
-    padding-left: 1rem;
-    margin-top: 150px;
+.experience-section {
+    padding: 50px;
+    background: var(--body-background);
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .experience-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-}
-.experience-header h1{
-    font-family: Train One ;
-    position: relative;
-    font-size: 350%;
-    z-index: 2;
-    color: var(--first-color);
-}
-#exp-h1{
-    position: absolute;
-    font-size: 450%;
-    color: var(--high-light-color);
-    z-index: 1;
-    opacity: 0.3
-}
-
-
-
-.exp-container{
-    padding-left: 4rem;
+  }
+  
+  .experience-card {
+    background: transparent;
+    border: 2px solid var(--high-light-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    align-items: start;
-}
-
-.exp-container h2,h4,h5{
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .experience-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .experience-card h3 {
+    margin: 0;
+    margin-top: 2px;
+    font-size: 1.3rem;
     color: var(--high-light-color);
-}
-.exp-container span{
+  }
+  
+  .experience-card h4 {
+   margin: 5px 0 0 5px;
+    font-size: 1rem;
     color: var(--first-color);
-}
-
-.exp-container .exp-list{
-    padding: 1rem 2rem;
-}
-.exp-list1 li{
-    display: flex;
-    align-items: center;
-}
-.exp-list1 li span{
-    padding-left: 8px;
-    padding-right: 8px;
-    color: var(--high-light-color);
-}
-
-.exp-list2 li{
-    list-style-type: circle;
-}
-
-.telecom-works{
-    padding-left: 2rem;
-    padding-top: 2rem;
-}
-
-.exp-container th{
-    text-align: left;
-    font-size: x-large;
-    color: var(--high-light-color);
-}
-.exp-container td:nth-child(odd){
-    text-align: left;
-}
-.exp-container td:nth-child(even){
-    padding-left: 1rem;
-}
-
-@media screen and (max-width: 750px) {
-    .experience-header h1{
-        font-size: 300%;
-    }
-    #exp-h1{
-        font-size: 380%;
-    }
-    .exp-container{
-        width: 100%;
-    }
-
-    .telecom-works{
-        width: 100%;
-    }
-    .exp-list1 li{
-        display: inline-block;
-    }
-    .exp-list1 li span{
-        padding: 0;
-    }
-}
-@media screen and (min-width: 751px){
-    .exp-list1 li span{
-        padding: 0;
-    }
-    .exp-list1 li{
-        display: inline-block;
-    }
-}
+  }
+  
+  .experience-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 5px 0;
+  }
+  .experience-card p strong{
+    color: var(--first-color)
+  }
+  

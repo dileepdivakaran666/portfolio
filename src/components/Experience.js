@@ -1,63 +1,51 @@
-import React from 'react'
-import { FaArrowAltCircleRight } from "react-icons/fa";
-import './Experience.css'
+import React from "react";
+import { motion } from "framer-motion";
+import "./Experience.css";
 
-function Experience() {
-  return (
-    <>
-    <div className='experience-header'>
-        <h1>Experience</h1>
-        <h1 id='exp-h1'>Experience</h1>
+const experiences = [
+  {
+    role: "MERN Stack Developer trainee",
+    company: "Zoople Technologies",
+    duration: "Present",
+    year: "2024",
+    description: "Building full-stack web applications, including goVagamon and a blog app.",
+  },
+  {
+    role: "Software Developer",
+    company: "Telecomatics Technologies",
+    duration: "10 months",
+    year: "2022-2023",
+    description: "Developed a railway project for secure data storage and worked on Angular and .NET applications.",
+  },
+];
+
+const Experience = () => {
+  return (<>
+  <div className='skill-header'>
+    <h1>Experience</h1>
+    <h1 id='skill-h1'>Experience</h1>
     </div>
-    <div className='exp-container'>
-        <table>
-          <tr>
-          <th colSpan={2}>Software Developer</th>
-          </tr>
-          <tr>
-            <td>Company</td>
-            <td>: Telecomatics Technologies</td>
-          </tr>
-          <tr>
-            <td>Duration</td>
-            <td>: 1 year</td>
-          </tr>
-          <tr>
-            <td>Date</td>
-            <td>: 04/11/2022 to 30/11/2023</td>
-          </tr>
-        </table>
-        {/* <h4><span>Company &nbsp; :</span> &nbsp; Telecomatics Technologies</h4>
-        <h4><span>Duration &nbsp; :</span>&nbsp; 1 Year</h4>
-        <h4><span>Date &nbsp; :</span>&nbsp; 04/11/2022 &nbsp;-&nbsp; 30/11/2023</h4> */}
-        <div className='telecom-works'>
-          <h1>Iceberg</h1>
-          <ul className='exp-list1'>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Contributed to the development of the &nbsp; <span><strong>'Iceberg'</strong></span>&nbsp; web application using <span>Angular</span>, <span>.NET</span>, and the <span>NgZoro</span>&nbsp;
-            framework.</li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Collaborated across the full software development lifecycle, from conceptualization to deployment,
-            working closely with cross-functional teams.</li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Optimized the existing codebase and integrated new features to enhance performance and user
-            satisfaction.</li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Ensured high-quality code by adhering to best practices, implementing rigorous testing, and debugging
-            processes.</li>
-          </ul>
-        </div>
-        <div className='telecom-works'>
-          <h1>Wim_Track</h1>
-          <ul className='exp-list1'>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Contributed to the development of the &nbsp; <span><strong>'Wim-Track'</strong></span>&nbsp; Desktop application for Railway using <span>Winforms</span> and<span> SqlServer</span></li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Collaborated across the full software development lifecycle, from conceptualization to deployment,
-            working closely with cross-functional teams.</li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Optimized the existing codebase and integrated new features to enhance performance and user
-            satisfaction.</li>
-            <li><FaArrowAltCircleRight style={{margin: '8px', color: 'hsl(180, 100%, 50%)'}}/>Ensured high-quality code by adhering to best practices, implementing rigorous testing, and debugging
-            processes.</li>
-          </ul>
-        </div>
+    <div className="experience-section">
+      <div className="experience-container">
+        {experiences.map((exp, index) => (
+          <motion.div
+            className="experience-card"
+            key={index}
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h3>{exp.role}</h3>
+            <h4>{exp.company} • {exp.year}</h4>
+            <p><strong>Duration:</strong> {exp.duration}</p>
+            <p>{exp.description}</p>
+          </motion.div>
+        ))}
+      </div>
     </div>
     </>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

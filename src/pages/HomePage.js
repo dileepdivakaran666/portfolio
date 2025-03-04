@@ -9,6 +9,7 @@ import About from '../components/About'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
 import Experience from '../components/Experience'
+import Project from '../components/Project';
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -46,6 +47,7 @@ function HomePage() {
         <Experience/>
         <Education/>
         <Skills/>
+        <Project/>
         <About/>
         </main>
   )

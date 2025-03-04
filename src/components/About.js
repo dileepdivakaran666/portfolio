@@ -1,7 +1,7 @@
 import React from 'react'
 import model from '../assets/dilee.jpg'
 import { NavLink } from 'react-router-dom'
-import ParticleBackground from '../pages/ParticleBackground'
+// import ParticleBackground from '../pages/ParticleBackground'
 import { FaArrowRight } from "react-icons/fa6";
 
 import './About.css'
@@ -23,7 +23,7 @@ function About() {
 
   return (
   <>
-  <ParticleBackground/>
+  {/* <ParticleBackground/> */}
     <div className='about-header'>
         <h1>About Me</h1>
         <h1 id='abt-h1'>About Me</h1>
