@@ -22,7 +22,8 @@ function Header() {
     <header>
         <nav>
             <div className='logo'>
-                <img src={logo} alt='logo'/>
+            <NavLink to="/"><img src={logo} alt='logo'/></NavLink>
+                
             </div>
             <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
             <ul className='header-ul'> 

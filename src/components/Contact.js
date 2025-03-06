@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import './Contact.css'
 import emailjs from 'emailjs-com'
-import { IoMail } from "react-icons/io5";
-import { FaPhoneSquare } from "react-icons/fa";
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -33,24 +31,7 @@ function Contact() {
   return (
     <div className='contact-page'>
       <div className='cont-personal'>
-
         <h1 className='cont-h1'>Let's Chat.<br/>Tell me about your project</h1>
-        <div className='contact-details'>
-            <table>
-              <tr>
-                <td>Email :</td>
-                <td><a href='mailto:dileepdivakaran666@gmail.com' target="_blank" rel="noopener noreferrer">
-                    <IoMail/>dileepdivakaran666@gmail.com
-                    </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Phone no :</td>
-                <td><a href="tel:+918113938201" target="_blank" rel="noopener noreferrer"> <FaPhoneSquare/>+918113938201</a>
-                </td>
-              </tr>
-            </table>
-          </div>
       </div>
     <div className='cont-container'>
       <h2>Send me a Message</h2>

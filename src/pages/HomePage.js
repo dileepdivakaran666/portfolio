@@ -45,9 +45,9 @@ function HomePage() {
         />
         <Banner/>
         <Experience/>
+        <Project/>
         <Education/>
         <Skills/>
-        <Project/>
         <About/>
         </main>
   )

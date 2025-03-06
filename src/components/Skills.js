@@ -1,5 +1,5 @@
 import React from 'react'
-// import { motion, useAnimation } from "framer-motion"
+import { motion } from "framer-motion"
 // import { useInView } from 'react-intersection-observer';
 import { skillDatas } from '../data/skillData'
 
@@ -16,37 +16,61 @@ function Skills() {
     <h2 className='skl-con-head'>Front End</h2>
     <div className='skl-container'>
         {skillDatas[0].map((result)=>(
-            <div key={result.id} className='skl-card'>
+            <motion.div
+                        className='skl-card'
+                        key={result.id}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: result.id * 0.2 }}
+                        viewport={{ once: true }}  >
                 <img src={result.image} alt={result.tool}/>
                 <h4>{result.tool}</h4>
-            </div>
+            </motion.div>
         ))}
     </div>
     <h2 className='skl-con-head'>Back End</h2>
     <div className='skl-container'>
         {skillDatas[1].map((result)=>(
-            <div key={result.id} className='skl-card'>
+            <motion.div
+            className='skl-card'
+            key={result.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: result.id * 0.2 }}
+            viewport={{ once: true }}>
                 <img src={result.image} alt={result.tool}/>
                 <h4>{result.tool}</h4>
-            </div>
+            </motion.div>
         ))}
     </div>
     <h2 className='skl-con-head'>API</h2>
     <div className='skl-container'>
         {skillDatas[2].map((result)=>(
-            <div key={result.id} className='skl-card'>
+            <motion.div
+            className='skl-card'
+            key={result.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: result.id * 0.2 }}
+            viewport={{ once: true }}>
                 <img src={result.image} alt={result.tool}/>
                 <h4>{result.tool}</h4>
-            </div>
+            </motion.div>
         ))}
     </div>
     <h2 className='skl-con-head'>Programing Language</h2>
     <div className='skl-container'>
         {skillDatas[3].map((result)=>(
-            <div key={result.id} className='skl-card'>
+            <motion.div
+            className='skl-card'
+            key={result.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: result.id * 0.2 }}
+            viewport={{ once: true }}>
                 <img src={result.image} alt={result.tool}/>
                 <h4>{result.tool}</h4>
-            </div>
+            </motion.div>
         ))}
     </div>
     </>

@@ -31,15 +31,19 @@ const Experience = () => {
           <motion.div
             className="experience-card"
             key={index}
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -200 : 200 }}
+            whileInView={{ opacity: 1,scale: 1, x:0}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2, delay: index * 0.2, type: "spring", velocity: 10 }}
             viewport={{ once: true }}
+            whileHover={{ scale: 1.01, transition:{duration:0} }}
           >
-            <h3>{exp.role}</h3>
-            <h4>{exp.company} • {exp.year}</h4>
-            <p><strong>Duration:</strong> {exp.duration}</p>
-            <p>{exp.description}</p>
+            <div className="card-content">
+              <h2>{exp.role}</h2>
+              <h3>{exp.company} • {exp.year}</h3>
+              <small><strong>Duration:</strong> {exp.duration}</small>
+              <p>{exp.description}</p>
+            </div>
           </motion.div>
         ))}
       </div>
